@@ -41,29 +41,29 @@
     "watch": "concurrently --kill-others \"yarn run lint:watch\" \"yarn run tsc:watch\""
   },
   "dependencies": {
-    "@broid/schemas": "^1.0.1",
-    "@broid/utils": "^1.1.1",
-    "bluebird": "^3.4.7",
-    "ramda": "^0.23.0",
-    "rxjs": "^5.0.2",
-    "sinon": "^2.1.0",
-    "uuid": "^3.1.0",
-    "viber-bot": "^1.0.6"
+    "@broid/schemas": "1.0.1",
+    "@broid/utils": "1.1.1",
+    "bluebird": "3.4.7",
+    "ramda": "0.23.0",
+    "rxjs": "5.0.2",
+    "sinon": "2.1.0",
+    "uuid": "3.1.0",
+    "viber-bot": "1.0.6"
   },
   "devDependencies": {
-    "@types/node": "^7.0.12",
-    "@types/ramda": "^0.0.5",
-    "@types/uuid": "^3.0.0",
-    "ava": "^0.17.0",
-    "concurrently": "^3.1.0",
-    "copyfiles": "^1.0.0",
-    "nsp": "^2.6.3",
-    "nyc": "^10.1.2",
-    "tslint": "^4.3.1",
-    "tslint-eslint-rules": "^3.5.1",
-    "tslint-microsoft-contrib": "^4.0.1",
+    "@types/node": "7.0.12",
+    "@types/ramda": "0.0.5",
+    "@types/uuid": "3.0.0",
+    "ava": "0.17.0",
+    "concurrently": "3.1.0",
+    "copyfiles": "1.0.0",
+    "nsp": "2.6.3",
+    "nyc": "10.1.2",
+    "tslint": "4.3.1",
+    "tslint-eslint-rules": "3.5.1",
+    "tslint-microsoft-contrib": "4.0.1",
     "typescript": "~2.2.2",
-    "watch": "^1.0.1"
+    "watch": "1.0.1"
   },
   "ava": {
     "files": [

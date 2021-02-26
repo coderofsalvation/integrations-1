@@ -106,10 +106,12 @@ export class Adapter {
   }
 
   public listen(): Observable<object> {
+	const patch = (a) => a._rejectionHandler0 && a._rejectionHandler0.type ? a._rejectionHandler0 : a
     return Observable.fromEvent(this.ee, 'message')
       .switchMap((value) => {
         return Observable.of(value)
           .map((normalized: object | null) => this.parser.parse(normalized))
+		  .map(patch)
           .map((parsed: object | null) => this.parser.validate(parsed))
           .map((validated: object | null) => {
             if (!validated) { return Observable.empty(); }

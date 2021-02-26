@@ -69,10 +69,12 @@ class Adapter {
         return this.client.disconnectAsync();
     }
     listen() {
+        const patch = (a) => a._rejectionHandler0 && a._rejectionHandler0.type ? a._rejectionHandler0 : a;
         return Rx_1.Observable.fromEvent(this.ee, 'message')
             .switchMap((value) => {
             return Rx_1.Observable.of(value)
                 .map((normalized) => this.parser.parse(normalized))
+                .map(patch)
                 .map((parsed) => this.parser.validate(parsed))
                 .map((validated) => {
                 if (!validated) {
